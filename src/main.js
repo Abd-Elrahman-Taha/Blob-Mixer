@@ -169,6 +169,7 @@ renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 const controls = new OrbitControls(camera, canvas);
 controls.enableDamping = true;
 controls.enableZoom = false;
+controls.enabled = window.innerWidth > 768;
 
 // ==================== SCROLL SYSTEM ====================
 const totalShapes = 8;
@@ -314,6 +315,7 @@ window.addEventListener("resize", () => {
   camera.aspect = window.innerWidth / window.innerHeight;
   camera.updateProjectionMatrix();
   renderer.setSize(window.innerWidth, window.innerHeight);
+  controls.enabled = window.innerWidth > 768;
 });
 
 // Loading
