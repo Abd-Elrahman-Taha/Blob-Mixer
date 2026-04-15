@@ -188,7 +188,7 @@ window.addEventListener('touchstart', (e) => {
 }, { passive: true });
 window.addEventListener('touchmove', (e) => {
   let dy = touchStartY - e.touches[0].clientY;
-  scrollVelocity += dy * 0.003;
+  scrollVelocity += dy * 0.00009;
   touchStartY = e.touches[0].clientY;
 }, { passive: true });
 
