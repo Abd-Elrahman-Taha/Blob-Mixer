@@ -178,7 +178,7 @@ let baseSpinAccumulator = 0;
 
 // Intercept scroll using wheel and touch instead of native DOM scrolling
 window.addEventListener('wheel', (e) => {
-  scrollVelocity += e.deltaY * 0.0006;
+  scrollVelocity += e.deltaY * 0.0002;
 }, { passive: true });
 
 let touchStartY = 0;
